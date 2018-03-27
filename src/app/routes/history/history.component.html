@@ -1,0 +1,50 @@
+
+<div class="main-content">
+    <div class="header-coubuy">
+      <div class="bg-logo" style="background-image: url('assets/img/logo_bg.jpeg')"></div>
+      <p class="history-order-title">订单</p>
+      <img src="assets/img/coubuy_logo.png" class="small-logo">
+    </div>
+    <div *ngIf="historyProduct" class="history-content" style="background-image: url('assets/img/logo_bg.jpeg')">
+      <div class="history-list" *ngFor="let his of historyProduct;" 
+      [routerLink]="['/historyDetail', his.ordernum]">
+        <div class="his-logo" *ngIf="his.type == 0">
+          <img *ngIf="his.logo" src={{his.logo}} class="his-pic" alt="Loading...">
+          <img *ngIf="!his.logo"src="http://gd.counect.com:8500/logo/CgpzWlYbHs-1.png" alt="Loading...">
+        </div>
+        <div class="his-logo" *ngIf="!his.type == 0">
+          <img src="assets/img/backamount.jpg" alt="Loading..." class="his-pic">
+        </div>
+        <div class="his-information">
+          <div class="his-first-box">
+            <div class="his-name-box">
+              <div class="his-name">
+                <a href="{{his.url}}">{{his.storename}}</a>
+                <div class="his-direction"></div>
+              </div>
+            </div>
+            <div class="his-ordered">订单已完成</div>
+          </div>
+          <div class="his-time-box">
+              <div class="his-time">{{his.create_time}}</div>
+          </div>
+          <div class="his-secondbox">
+            <div class="his-address_name">{{his.address_name}}</div>
+            <div class="his-amount">
+              ￥ {{his.amount/100}}
+              <span *ngIf="!his.type == 0" class="his-backamount">(退款)</span>
+            </div>
+          </div>
+          <div class="his-three-box">
+            <div class="his-ordernum">{{his.client==1?'微信':'支付宝'}}订单号:{{his.no3}}</div>
+            <div class="his-look">查看详情</div>
+          </div>
+        </div>
+    </div>
+    <p *ngIf="isOrderBottom" [style.display]="isShow?'block':'none'" class="is-order-bottom">
+        没有更多订单可以加载了
+    </p>
+    <div *ngIf="historyProduct.length == 0" class="no-history">
+      <p>暂时没有历史订单信息</p>
+    </div>
+</div>

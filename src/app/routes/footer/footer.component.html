@@ -1,0 +1,23 @@
+<!-- 2018-01-31 update -->
+<footer class="index-bottom">
+  <ul class="bottom-btns">
+    <li>
+      <a routerLink="/coubuy" (click)="isActived(0)" [ngClass]="isActive_1?'a-active':'a-no-active'">
+        <span class="iconhome"></span>
+        <span class="list">首页</span>  
+      </a>
+    </li>
+    <li>
+      <a routerLink="/history" (click)="isActived(1)" [ngClass]="isActive_2?'a-active':'a-no-active'">
+        <span class="iconfile-text"></span>
+        <span class="list">订单</span>
+      </a>
+    </li>
+    <!-- <li>
+      <a routerLink="/user" (click)="isActived(2)">
+        <span [ngClass]="isActive_3? 'personcenter-page-active': 'personcenter-page-noactive'" class="iconhome"></span>
+        <span [ngClass]="isActive_3? 'font-index-a': 'font-index-b'">我的</span>
+      </a>
+    </li> -->
+  </ul>
+</footer>

@@ -1,0 +1,96 @@
+  <!-- <div class="user-info" *ngIf="user">
+      <button class="update-info" (click)="isFormHidden()">
+          <span class="update-info-one">修改个人信息</span>
+          <span class="update-info-two">&nbsp;</span>
+      </button>
+      <div class="bg-logo" style="background-image: url('../../../assets/img/logo_bg.jpeg')"></div>
+      <div class="header-coubuy">
+            <div class="username-userpic">
+                <div class="userpic-background">
+                    <img  class="userpic-content" src="../../../assets/img/counect_1.jpg" alt="图片加载中">
+                </div>
+                <span class="username">{{user.name}}</span>
+            </div>
+            <div class="user-direction"></div>
+      </div>
+    <div class="important-box">
+        <div class="important-title">
+          <span class="wire-one"></span>
+          个人详细资料
+          <span class="wire-two"></span>
+        </div>
+        <p>
+          <span class="userid">用户编号</span>
+          <span class="userid-content">{{user.id}}</span>
+        </p>
+        <p>
+          <span class="usergender">用户性别</span>
+          <span class="usergender-content">{{user.gender == 0?'男':'女'}}</span>
+        </p>
+        <p class="padding-bottom">
+          <span class="usertel">联系电话</span>
+          <span class="usertel-content">{{user.tel}}</span>
+        </p>
+    </div>
+    <!-- 登录方式 -->
+    <!-- <div class="client-box">
+        <div class="client-title">
+            <span class="wire-one"></span>
+            其它资料
+            <span class="wire-two"></span>
+          </div>
+        <div class="clientting">
+          <span>本次登录方式</span>
+          <span>{{user.client == 1? '微信':'支付宝'}}</span>
+        </div>
+        <p class="user-time">
+            <span>创建时间</span>
+            <span>{{user.create_time}}</span>
+          </p>
+          <p class="user-time bottom-range">
+            <span>更新时间</span>
+            <span>{{user.update_time}}</span>
+          </p>
+    </div>
+    <div class="page-bottom"></div>
+  </div>
+      
+  <div class="wrapper" [style.display]="isFormOpen? 'block': 'none'" [class.wrapper-add]="isFormOpen">
+    <div class="form-title">
+      <span class="form-title-back" (click)="isCloseWindow()"></span>
+    </div>
+    <div class="form-logo">
+      <img src="../../../assets/img/coubuy.png" alt="图片加载中">
+    </div>
+    <form [formGroup]="validateForm" #formDir="ngForm" (ngSubmit)="upload()">
+      <label class="input-style">
+        <span class="input-title">用户名称</span>
+        <input  type="text" id="userName"
+              formControlName="userName" required maxlength="20" [(ngModel)]="formsVail.userName">
+      </label>
+      <span *ngIf="userName.invalid&&(userName.dirty || userName.touched)">
+        <span *ngIf="userName.errors.required" class="vali-errors">*请输入20位字符以内</span>
+    </span>
+      <br>
+      <label class="input-style">
+        <span class="input-title">联系方式</span>
+        <input type="tel" id="userTel"  formControlName="userTel"
+              maxlength="11" minlength="8" required [(ngModel)]="formsVail.userTel">
+        <br>
+      </label>
+      <span *ngIf="userTel.invalid&&(userTel.dirty || userTel.touched)">
+        <span *ngIf="userTel.errors.required" class="vali-errors">*请输入8-11位有效号码</span>
+        <span *ngIf="userTel.errors.minlength" class="vali-errors">*请输入8-11位有效号码</span>
+      </span>
+      <br>
+      <label class="user-gender">
+        <span style="color: #999">用户性别</span>
+        <input type="radio" name="userSex" id="userSex" formControlName="userSex"
+              value="0" [checked]="true" [(ngModel)]="formsVail.userSex">&nbsp;男
+        <input type="radio" name="userSex" formControlName="userSex"
+              value="1" [(ngModel)]="formsVail.userSex">&nbsp;女
+      </label>
+      <button [ngClass]="!validateForm.invalid? 'form-btn': 'form-btn-default'" [disabled]="validateForm.invalid">更新信息</button>
+    </form>
+</div> -->
+

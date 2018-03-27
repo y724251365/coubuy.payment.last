@@ -1,0 +1,119 @@
+<div class="header-coubuy">
+    <div class="bg-logo" style="background-image: url('assets/img/logo_bg.jpeg')"></div>
+    <button class="btn-back" (click)="toBackPrev()"></button>
+  </div>
+<div *ngIf="detailProduct" class="detail-title">
+  <p class="detailed">订单已完成
+    <span></span>
+  </p>
+  <div class="detail-title-square">
+      <p class="detail-order">感谢您对我们的信任，期待您的下次光临</p>
+      <p class="detail-amount">订单价格：￥{{amount/100|number:'1.0-2'}}</p>
+  </div>
+</div>
+<div class="detail" *ngIf="detailProduct">
+  <div class="detail-card">
+    <div class="card-title">
+        <span class="wire-one"></span>
+        订单详细信息
+        <span class="wire-two"></span>
+      </div>
+    <div class="detail-num">
+      <p>
+        订单编号：
+        <span>{{no3}}</span>
+      </p>
+      <p>
+          订单类型：
+          <span>{{type == 0? '购买订单':'退款订单'}}</span>
+        </p>
+      <p>
+        订单价格：
+        <span> ￥{{amount/100|number:'1.0-2'}}元</span>
+      </p>
+    </div>
+    <p class="detail-money bottom-range">实付： ￥ {{amount/100|number:'1.0-2'}} 元</p>
+  </div>
+  <div class="detail-card" >
+    <div class="card-title">
+      <span class="wire-one"></span>
+        商品信息详情
+      <span class="wire-two"></span>
+    </div>
+    <div class="detail-num bottom-range" *ngFor="let shop of detailShopping; let i=index">
+      <p class="detail-num-title">商品{{i+1}}</p>
+      <p>
+        <span class="gray-font">商品名称：</span>
+        <span>{{shop.title}}</span>
+      </p>
+      <p>
+          <span class="gray-font">商品数量：</span>
+        <span>{{shop.count}}</span>
+      </p>
+      <p>
+          <span class="gray-font">商品单价：</span>
+         <span>￥ {{shop.price/100|number:'1.0-2'}}</span>
+      </p>
+    </div>
+  </div>
+  <div class="detail-card">
+      <div class="card-title">
+        <span class="wire-one"></span>
+          酒店信息详情
+        <span class="wire-two"></span>
+      </div>
+      <div class="detail-num bottom-range">
+        <p>
+          <span class="gray-font">酒店名称：</span>
+          <span>{{detailProduct.b_name}}</span>
+        </p>
+        <p>
+            <span class="gray-font">酒店地址：</span>
+          <span>{{detailProduct.b_addr}}</span>
+        </p>
+        <p>
+            <span class="gray-font">酒店电话：</span>
+           <span>{{detailProduct.b_tel}}</span>
+          </p>
+        <p>
+            <span class="gray-font">房间编号：</span>
+          <span>{{detailProduct.c_name}}</span>
+        </p>
+        <p>
+            <span class="gray-font">房间电话：</span>
+          <span>{{detailProduct.c_tel}}</span>
+        </p>
+      </div>
+    </div>
+  
+  <div class="detail-card">
+    <div class="card-title">
+        <span class="wire-one"></span>
+          订单时间详情
+        <span class="wire-two"></span>
+    </div>
+    <div class="detail-num bottom-range">
+      <p class="gray-font">
+        <span class="gray-font">创建订单时间：</span>
+        <span class="detail-time">{{detailProduct.create_time | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+      </p>
+      <p class="gray-font">
+        <span class="gray-font">接受订单时间：</span>
+        <span class="detail-time">{{detailProduct.taken_time | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+      </p>
+      <p class="gray-font">
+        <span class="gray-font">客户到达时间：</span>
+        <span class="detail-time">{{detailProduct.arrive_time | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+      </p>
+      <p class="gray-font">
+        <span class="gray-font">完成订单时间：</span>
+        <span class="detail-time">{{detailProduct.finish_time | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+      </p>
+      <p class="gray-font">
+          <span class="gray-font">更新订单时间：</span>
+          <span class="detail-time">{{detailProduct.update_time | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+        </p>
+    </div>
+  </div>
+  <p class="hotel-end">如有疑问，请来电咨询</p>
+</div> -->

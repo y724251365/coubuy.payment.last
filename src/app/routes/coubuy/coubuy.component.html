@@ -1,0 +1,29 @@
+<div class="header-coubuy">
+  <div class="bg-logo" style="background-image: url('assets/img/logo_bg.jpeg')"></div>
+  <div class="logo">
+    <img src="{{room.logo}}"/>
+  </div>
+  <div class="hotel">
+    <h3>{{room.storename}}</h3>
+    <span class="room">房间: {{room.address_name}}</span>
+    <span class="room">SN: {{machine.sn}}</span>
+  </div>
+</div>
+<div class="coubuy">
+  <div class="card">
+    <div class="d3serve-title">酒店服务</div>
+    <ul class="d3serve">
+      <li class="list">
+        <div class="list-item" *ngFor="let i of linksArr">
+          <a href="http://m.coinect.cn/n/{{i.app_mcode}}-{{i.en_mcode}}">
+            <img src="assets/img/serve/{{i.app_appcode}}.png"/>
+            <p>{{i.app_title}}</p>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="server">
+    <a href="tel:{{room.mobile}}">{{room.mobile}}</a>
+  </div>
+</div>

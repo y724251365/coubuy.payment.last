@@ -1,0 +1,152 @@
+@import "../../cui/variable";
+.bg-logo {
+    height: 30vh;
+    width: 100vw;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+}
+.header-coubuy {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 30vh;
+    text-align: center;
+    overflow: hidden;
+    color: #fff;
+    background: rgba(7, 17, 27, 0.2);
+    .btn-back {
+        position: absolute;
+        top: 1%;
+        left: 0;
+        display: inline-block;
+        margin-top: 1%;
+        margin-left: 3vw;
+        width: 20px;
+        height: 22px;
+        background: url(../../../assets/img/direction_opacity.png) no-repeat -44px -8px;
+        }
+}
+.detail-title {
+    overflow: hidden;
+    .detailed {
+        position: absolute;
+        top: 13%;
+        left: 10%;
+        color:#fff;
+        font-size: .6rem;
+        font-weight: 500;
+        span {
+            display: inline-block;
+            margin-top: 1%;
+            margin-left: 3vw;
+            width: 20px;
+            height: 22px;
+            background: url(../../../assets/img/direction_opacity.png) no-repeat -8px -8px;
+        }
+    }
+    .detail-title-square {
+        position: absolute;
+        top: 20%;
+        left: 0;
+        margin: 0 3vw;
+        width: 94vw;
+        height:10vh;
+        text-align: center;
+        background: rgba(255,255,255,.8);
+        border-radius: 3px 3px 0 0;
+        .detail-order {
+            padding-top: 1.5vh;
+            font-size: .4rem;
+            text-shadow: 5px 5px 5px rgb(248, 215, 215);
+        }
+        .detail-amount {
+            padding-top: 3vh;
+            font-size: .4rem;
+            color: #399EFF;
+        }
+    }
+}
+.detail {
+    .detail-card {
+        margin-left: 4vw;
+        margin-top: 2.5vh;
+        width: 92vw;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 5px 25px rgba(54, 146, 249, .3);
+        .card-title {
+            position: relative;
+            padding: 2vh 0;
+            height: 4vh;
+            line-height: 4vh;
+            text-align: center;
+            font-size: $size-desc*1.2;
+            font-weight: 200;
+            border-bottom: 1px solid $gray-100;
+            span {
+                width: 9%;
+                height: 1px;
+                background: $gray-300;
+            }
+            .wire-one {
+                position: absolute;
+                top: 50%;
+                left: 25%;
+            }
+            .wire-two {
+                position: absolute;
+                top: 50%;
+                left: 65%;
+            }
+        }
+        .detail-num p {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 5vw;
+            padding: .7vh 0;
+            width: 80vw;
+            height: 4vh;
+            line-height: 4vh;
+            font-size: $size-desc*1.2;
+            color: #6E6E6E;
+            border-bottom: 1px solid $gray-100;
+            span {
+                color: #6E6E6E;
+            }
+        }
+        .detail-money {
+            margin-left: 5vw;
+            width: 80vw;
+            height: 6vh;
+            line-height: 6vh;
+            text-align: right;
+            font-size: $size-desc*1.2;
+            color: #6E6E6E;
+        }
+    }
+    }
+
+.gray-font{
+    color: #6E6E6E;
+}
+.bottom-range {
+    padding-bottom: 3vh;
+}
+.hotel-end{
+    padding:2vh 0 9vh 0;
+    text-align:center;
+    font-size:.32667rem;
+    color:#3A8AE9;
+}
+.detail-num-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: .4rem;
+    color: #000;
+}
